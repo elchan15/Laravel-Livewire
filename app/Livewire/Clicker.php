@@ -7,13 +7,17 @@ use Livewire\Component;
 
 class Clicker extends Component
 {
-    public $sample = 12345;
+    public $txtname;
+    public $txtemail;
+    public $txtpassword;
+
     public function createNewUser(){
-        User::create([
-            'name'=>'abc cgdhs2',
-            'email'=>'abc2@gmail.com',
-            'password'=>'123452',
+       User::create([
+            'name'=> $this->txtname,
+            'email'=> $this->txtemail,
+            'password'=> $this->txtpassword,
         ]);
+       
     }
     
     public function render()
